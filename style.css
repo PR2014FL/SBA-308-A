@@ -25,7 +25,10 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.bttn2 {
+    display: flex;
+    justify-content: center;
+  }
 .imgCat {
   /* display: none; */
   /* width: 40%; */
@@ -36,6 +39,22 @@ body {
   /* width: 40%; */
   height: 50vh;
   border: 10px solid #0081BB;
+}
+
+.reset {
+    background-color: #04AA6D;
+    color: white;
+    border: 2px solid #04AA6D;
+    margin: 4px;
+    padding: 16px 32px;
+    font-size: 16pt;
+    transition-duration: 0.3s;
+    }
+.reset:hover {
+    background-color: #8ed9bd; 
+  color: black; 
+  font-weight: 900;
+  border: 2px solid #8ed9bd;
 }
 .pickerBttn {
   width: 50%;
@@ -52,6 +71,7 @@ body {
   border: 2px solid #0081BB;
   color: white;
 }
+
 .clicked {
   width: 50%;
   height: 60px;

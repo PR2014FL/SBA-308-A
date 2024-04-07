@@ -21,6 +21,7 @@ function randomPicker(event) {
     let dogImg = document.querySelector(".imgDog");
     dogImg.setAttribute("style", "display: none"); //clean your hole!
     button.innerHTML = "You're getting a Cat!";
+    window.alert("I'm so happy for you!");
     button.setAttribute("class", "clicked");
     getCat();
   } else {
@@ -28,8 +29,15 @@ function randomPicker(event) {
     let catImg = document.querySelector(".imgCat");
     catImg.setAttribute("style", "display: none"); //clean your hole!
     button.innerHTML = "You're getting a Dog!";
+    window.alert("My condolences");
     button.setAttribute("class", "clicked");
     getDog();
   }
   event.stopPropagation();
 }
+
+const resetButton = document.querySelector(".reset");
+function reload() {
+  window.location.reload();
+}
+resetButton.addEventListener("click", reload);

@@ -40,5 +40,4 @@ export const getCat = async () => {
     let catImg = document.querySelector(".imgCat");
     catImg.setAttribute("src", jsonData[0].url);
     console.log(jsonData[0].url);
-    
   };
