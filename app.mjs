@@ -1,21 +1,35 @@
-import {getCat} from "./api1.mjs"
-import {getDog} from "./api2.mjs"
-
+import { getCat } from "./api1.mjs";
+import { getDog } from "./api2.mjs";
+//GIT Repo - https://github.com/PR2014FL/SBA-308-A
 
 getCat();
 getDog();
-let pickerBttn = document.getElementsByClassName("pickerBttn");
-pickerBttn.setInnerHTML = "You're getting a Cat!"
-function randomPicker() {
-    console.log("hello");
+const button = document.querySelector(".pickerBttn");
+button.addEventListener("click", randomPicker);
 
 // let randomizer = Math.random();
-// if (randomizer < .5) {//this will choose the cat picture
-//     pickerBttn.setInnerHTML = "You're getting a Cat!"
-//     getCat();
-// } else if (randomizer >= .5) {//this will choose the dog picture
-//     getDog();
-//     pickerBttn.setInnerHTML = "You're getting a Dog!"
+// console.log(randomizer);
 
-// };
+// button.innerHTML = "You're getting a Cat!"
+function randomPicker(event) {
+  // console.log("hello");
+  // button.innerHTML = "You're getting a Cat!";
+  let randomizer = Math.random();
+  // console.log(randomizer);
+  if (randomizer < 0.5) {
+    //this will choose the cat picture
+    let dogImg = document.querySelector(".imgDog");
+    dogImg.setAttribute("style", "display: none"); //clean your hole!
+    button.innerHTML = "You're getting a Cat!";
+    button.setAttribute("class", "clicked");
+    getCat();
+  } else {
+    //this will choose the dog picture
+    let catImg = document.querySelector(".imgCat");
+    catImg.setAttribute("style", "display: none"); //clean your hole!
+    button.innerHTML = "You're getting a Dog!";
+    button.setAttribute("class", "clicked");
+    getDog();
+  }
+  event.stopPropagation();
 }
