@@ -36,8 +36,16 @@ function randomPicker(event) {
   event.stopPropagation();
 }
 
-const resetButton = document.querySelector(".reset");
+//START OVER BUTTON
+const resetButton = document.createElement("button");
+const bttn2 = document.querySelector(".bttn2");
+resetButton.setAttribute("class", "reset");
+resetButton.setAttribute("type", "button");
+resetButton.innerHTML = "Start Over";
+bttn2.appendChild(resetButton);
+
 function reload() {
-  window.location.reload();
+    window.location.reload();
 }
 resetButton.addEventListener("click", reload);
+
