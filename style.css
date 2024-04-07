@@ -1,0 +1,40 @@
+.header {
+   text-align: center;
+}
+
+.petImg {
+    display:flex;
+    justify-content: center;
+    margin: 20px;
+    gap: 5px;
+}
+.bttn {
+    display:flex;
+    justify-content: center;
+}
+.imgCat {
+    /* display: none; */
+    width: 48%;
+    border: 10px solid #008CBA;
+    
+}
+.imgDog {
+    width: 48%;
+    border: 10px solid #008CBA;
+    
+}
+.pickerBttn {
+    width: 80%;
+    height: 50px;
+    border-radius: 30%;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+
+.pickerBttn:hover {
+    background-color: #008CBA;
+    border: 2px solid #008CBA;
+    color: white;
+}
